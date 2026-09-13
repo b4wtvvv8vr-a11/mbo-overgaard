@@ -359,8 +359,16 @@
           <rect x="200" y="222" width="40" height="78" fill="var(--paper)"/>
           <rect x="203" y="225" width="34" height="72" stroke-dasharray="3 3" opacity=".7"/>
           <circle cx="220" cy="256" r="14"/>
-          <path d="M220 256 L220 244 M220 256 L230 262 M220 256 L210 262" stroke-width="2"/>
-          <circle cx="220" cy="256" r="2.4" fill="currentColor"/>
+          <!-- fan: six curved blades around a hub -->
+          <g stroke-width="1.6">
+            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(0 220 256)"/>
+            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(60 220 256)"/>
+            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(120 220 256)"/>
+            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(180 220 256)"/>
+            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(240 220 256)"/>
+            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(300 220 256)"/>
+          </g>
+          <circle cx="220" cy="256" r="2.6" fill="currentColor"/>
           <path d="M220 280 V304" stroke="var(--oak)" stroke-width="2"/>
           <path d="M215 298 L220 306 L225 298" stroke="var(--oak)" stroke-width="2"/>
           <g stroke="var(--oak)" stroke-width="1.8">
