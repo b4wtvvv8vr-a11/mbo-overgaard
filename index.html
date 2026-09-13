@@ -56,7 +56,7 @@
     display: inline-flex; align-items: center; gap: 10px;
     padding: 14px 22px; border-radius: 4px; border: 1px solid var(--ink);
     background: var(--ink); color: var(--paper);
-    font-family: var(--body); font-weight: 600; font-size: 0.95rem; text-decoration: none; cursor: pointer;
+    font-family: var(--body); font-weight: 600; font-size: 0.95rem; text-decoration: none; cursor: pointer; white-space: nowrap;
     transition: background .15s ease, color .15s ease, border-color .15s ease;
   }
   .btn:hover { background: var(--oak); border-color: var(--oak); color: #fff; }
@@ -93,7 +93,7 @@
   .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; margin: 0; }
   .slide.is-active { opacity: 1; }
   .slide .ph { position: absolute; inset: 0; background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(255,255,255,.05) 18px 19px); }
-  .slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
   .hero::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(to top, rgba(20,19,17,.78) 0%, rgba(20,19,17,.45) 45%, rgba(20,19,17,.15) 100%);
@@ -178,6 +178,7 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px 64px; }
   .about-copy { display: flex; flex-direction: column; gap: 18px; max-width: 36em; }
   .about-copy p { color: var(--ink-soft); }
+  .about-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 30%; border-radius: 6px; margin-bottom: 8px; }
   .hire { margin-top: 40px; padding: 28px 32px; border: 1px solid var(--ink); border-radius: 4px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
   .hire h3 { font-size: 1.4rem; }
   .hire p { color: var(--ink-soft); margin-top: 6px; }
@@ -242,12 +243,9 @@
   <section class="hero" id="slides">
     <!-- Slideshow: swap each .ph for <img src="…" alt="…"> of real projects -->
     <div class="slides" aria-hidden="true">
-      <figure class="slide is-active" data-caption="Altanir og trappur"><div class="ph" style="background-color:#4a4741"></div></figure>
-      <figure class="slide" data-caption="Køk og innrætting"><div class="ph" style="background-color:#3d3b37"></div></figure>
-      <figure class="slide" data-caption="Klæðing og vindeygu"><div class="ph" style="background-color:#55514a"></div></figure>
-      <figure class="slide" data-caption="Útihús og skúrar"><div class="ph" style="background-color:#45423d"></div></figure>
+      <figure class="slide is-active" data-caption="Takarbeiði"><img src="img/tak-torshavn.jpg" alt=""></figure>
+      <figure class="slide" data-caption="Toymið á M.B. Overgaard"><img src="img/toymid.jpg" alt=""></figure>
     </div>
-    <span class="ph-note">Myndir koma her</span>
 
     <div class="wrap hero-inner">
       <p class="eyebrow">Bygningssnikkari · Argir</p>
@@ -257,12 +255,10 @@
         <a class="btn big" href="#samband">Fá óbindandi tilboð</a>
       </div>
       <div class="hero-meta">
-        <span class="cap" id="cap" aria-live="polite">Altanir og trappur <small>1 / 4</small></span>
+        <span class="cap" id="cap" aria-live="polite">Takarbeiði <small>1 / 2</small></span>
         <div class="dots" aria-label="Vel mynd">
           <button type="button" aria-label="Mynd 1" aria-current="true"></button>
           <button type="button" aria-label="Mynd 2"></button>
-          <button type="button" aria-label="Mynd 3"></button>
-          <button type="button" aria-label="Mynd 4"></button>
         </div>
       </div>
     </div>
@@ -296,7 +292,7 @@
           <a class="btn ghost" href="#samband">Fá tilboð</a>
         </div>
         <div class="svc-panel" id="panel-uti" role="tabpanel" aria-labelledby="tab-uti" hidden>
-          <div class="svc-img"></div>
+          <div class="svc-img"><img src="img/tak-torshavn.jpg" alt="Nýtt tak verður lagt á sethús, við Tórshavn í baksýni"></div>
           <h3>Timburarbeiði úti</h3>
           <p>Altanir, trappur, útihús, klæðing, vindeygu og úthurðar. Bygt til føroyskt veður – vind, regn og salt.</p>
           <ul><li>Altanir</li><li>Trappur</li><li>Klæðing</li><li>Vindeygu</li><li>Úthurðar</li><li>Útihús</li></ul>
@@ -418,6 +414,7 @@
           <h2 style="margin-top:10px">Snikkarar í Argir.</h2>
         </div>
         <div class="about-copy">
+          <img class="about-img" src="img/um-okkum.jpg" alt="Snikkarar frá M.B. Overgaard í verkstaðnum">
           <p>M.B. Overgaard Sp/f er eitt snikkaravirki í Argir, beint sunnan fyri Tórshavn. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið verður gjørt skilaliga og til tíðina.</p>
           <p>Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.</p>
           <p>Ring ella skriva – tú fært altíð eitt óbindandi tilboð.</p>
