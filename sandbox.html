@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
-  /* Sandbox v2 — white + stone, one deep pine accent, rounded photo blocks */
+  /* Sandbox v2 — white + stone, black accent, rounded photo blocks */
   :root {
     --paper: #ffffff;
     --stone: #f2f0eb;
@@ -19,9 +19,9 @@
     --ink-soft: #3d3b34;
     --mute: #6f6c64;
     --line: #dedbd4;
-    --pine: #24413a;
-    --pine-2: #1a302b;
-    --pine-soft: #e3ebe6;
+    --pine: #16150f;
+    --pine-2: #000000;
+    --pine-soft: #e6e3dc;
     --display: "Manrope", "Helvetica Neue", Arial, sans-serif;
     --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
     --wrap: 1160px;
@@ -51,6 +51,13 @@
   .btn.white:hover { background: var(--pine-soft); border-color: var(--pine-soft); }
   .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 100; }
   .skip:focus { left: 8px; }
+
+  /* Apprentice bar */
+  .topbar { background: var(--pine); color: #fff; font-size: 0.92rem; }
+  .topbar-in { display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap; padding: 10px 0; text-align: center; }
+  .topbar b { font-family: var(--display); font-weight: 700; }
+  .topbar a { color: #fff; font-family: var(--display); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.4); }
+  .topbar a:hover { border-color: #fff; }
 
   /* Header */
   header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
@@ -114,7 +121,7 @@
   .steps li::before { content: counter(s); font-family: var(--display); font-weight: 800; font-size: 1.2rem; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.5); display: grid; place-items: center; }
   .steps b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; }
   .steps span { grid-column: 2; color: rgba(255,255,255,.8); font-size: 1rem; }
-  .tight-art { background: rgba(255,255,255,.06); border-radius: var(--r); padding: clamp(16px, 3vw, 36px); }
+  .tight-art { background: rgba(255,255,255,.08); border-radius: var(--r); padding: clamp(16px, 3vw, 36px); }
   .tight-art svg { width: 100%; color: #fff; }
   .tight .btn { margin-top: 20px; align-self: flex-start; }
   .tight-copy { display: flex; flex-direction: column; gap: 16px; }
@@ -131,8 +138,8 @@
   .shot figcaption span { color: var(--mute); font-weight: 500; }
 
   /* About + apprentice */
-  .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
-  .about-copy { display: flex; flex-direction: column; gap: 16px; max-width: 36em; }
+  .about-grid { display: grid; grid-template-columns: 1fr; }
+  .about-copy { display: flex; flex-direction: column; gap: 16px; max-width: 40em; }
   .about-copy p { color: var(--ink-soft); }
   .hire { background: var(--pine-soft); border-radius: var(--r); padding: 30px; display: flex; flex-direction: column; gap: 14px; }
   .hire h3 { color: var(--pine); }
@@ -167,6 +174,13 @@
 </head>
 <body>
 <a class="skip" href="#main">Hopp til innihald</a>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span><b>Vit søkja timburlærling</b> – ert tú tann rætti?</span>
+    <a href="https://starvsportal.fo/job/timburlaerlingur-til-husasmid/" target="_blank" rel="noopener">Les meira á Starvsportal →</a>
+  </div>
+</div>
 
 <header>
   <div class="wrap nav">
@@ -343,12 +357,6 @@
         <p>Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.</p>
         <p>Ring ella skriva – tú fært altíð eitt óbindandi tilboð.</p>
       </div>
-      <aside class="hire">
-        <p class="eyebrow">Starv</p>
-        <h3>Vit søkja timburlærling</h3>
-        <p>Ert tú tann rætti? Vit leita eftir einum lærlingi til húsasmíð.</p>
-        <a class="btn" href="https://starvsportal.fo/job/timburlaerlingur-til-husasmid/" target="_blank" rel="noopener">Les meira á Starvsportal</a>
-      </aside>
     </div>
   </section>
 
