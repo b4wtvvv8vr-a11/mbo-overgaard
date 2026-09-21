@@ -66,6 +66,13 @@
   .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 100; }
   .skip:focus { left: 8px; }
 
+  /* Apprentice bar */
+  .topbar { background: var(--ink); color: #fff; font-size: clamp(1rem, 1.6vw, 1.2rem); }
+  .topbar-in { display: flex; justify-content: center; align-items: center; gap: 12px 28px; flex-wrap: wrap; padding: 18px 0; text-align: center; }
+  .topbar b { font-family: var(--display); font-weight: 800; font-stretch: 94%; font-size: 1.1em; }
+  .topbar a { color: var(--ink); background: #fff; font-family: var(--body); font-weight: 600; font-size: 0.9em; text-decoration: none; padding: 10px 18px; border-radius: 4px; transition: background .15s ease, color .15s ease; }
+  .topbar a:hover { background: var(--oak); color: #fff; }
+
   /* Header */
   header {
     position: sticky; top: 0; z-index: 50;
@@ -219,6 +226,13 @@
 <body>
 
 <a class="skip" href="#main">Hopp til innihald</a>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span><b>Vit søkja timburlærling</b> – ert tú tann rætti?</span>
+    <a href="https://starvsportal.fo/job/timburlaerlingur-til-husasmid/" target="_blank" rel="noopener">Les meira á Starvsportal →</a>
+  </div>
+</div>
 
 <header>
   <div class="wrap nav">
@@ -420,13 +434,6 @@
           <p>Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.</p>
           <p>Ring ella skriva – tú fært altíð eitt óbindandi tilboð.</p>
         </div>
-      </div>
-      <div class="hire">
-        <div>
-          <h3>Vit søkja timburlærling</h3>
-          <p>Ert tú tann rætti? Vit leita eftir einum lærlingi til húsasmíð.</p>
-        </div>
-        <a class="btn ghost" href="https://starvsportal.fo/job/timburlaerlingur-til-husasmid/" target="_blank" rel="noopener">Les meira á Starvsportal</a>
       </div>
     </div>
   </section>
