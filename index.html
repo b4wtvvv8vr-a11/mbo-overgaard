@@ -198,7 +198,7 @@
 
   /* Contact */
   .contact { border-top: 1px solid var(--line); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); }
+  .contact-grid { display: grid; grid-template-columns: 1fr; }
   .details { display: flex; flex-direction: column; gap: 28px; }
   .dl { display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; margin: 0; font-size: 1.02rem; }
   .dl dt { color: var(--mute); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding-top: 4px; }
@@ -462,30 +462,6 @@
             <dd><a href="https://www.facebook.com/m.b.overgaard/" target="_blank" rel="noopener">M B Overgaard Sp/f</a></dd>
           </dl>
         </div>
-        <form action="mailto:overgaard@mbo.fo" method="post" enctype="text/plain">
-          <div class="two">
-            <div class="field">
-              <label for="navn">Navn</label>
-              <input id="navn" name="Navn" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="tlf">Telefon</label>
-              <input id="tlf" name="Telefon" type="tel" autocomplete="tel">
-            </div>
-          </div>
-          <div class="field">
-            <label for="tpost">T-postur</label>
-            <input id="tpost" name="T-postur" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="bod">Hvat skal gerast?</label>
-            <textarea id="bod" name="Bod" placeholder="T.d. nýggj altan, umvæling av køki, Blower Door test …"></textarea>
-          </div>
-          <div>
-            <button class="btn" type="submit">Send umbøn</button>
-          </div>
-          <p class="form-note">Vit svara vanliga innan ein til tveir arbeiðsdagar.</p>
-        </form>
       </div>
     </div>
   </section>
