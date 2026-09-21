@@ -174,26 +174,22 @@
   @media (max-width: 520px) { .facts { grid-template-columns: 1fr; } }
 
   /* Projects */
-  .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .proj { display: flex; flex-direction: column; gap: 10px; margin: 0; }
-  .proj .img {
-    aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: 4px;
-    background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(0,0,0,.05) 14px 15px);
-    border: 1px solid var(--line-soft);
-  }
-  .proj .img { overflow: hidden; }
-  .proj .img img { width: 100%; height: 100%; object-fit: cover; }
-  .proj figcaption { font-size: 0.9rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 12px; }
-  .proj figcaption span { color: var(--mute); }
-  @media (max-width: 820px) { .proj-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 520px) { .proj-grid { grid-template-columns: 1fr; } }
+  .work { background: var(--paper-2); border-top: 1px solid var(--line-soft); }
+  .work-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 48px); }
+  .work-head h2 { margin-top: 10px; }
+  .track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--gutter) 8px; margin: 0 calc(-1 * var(--gutter)); scrollbar-width: thin; }
+  .shot { flex: 0 0 min(78vw, 420px); scroll-snap-align: start; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .shot .img { aspect-ratio: 4 / 3; border-radius: 4px; overflow: hidden; background: var(--paper-3); }
+  .shot .img img { width: 100%; height: 100%; object-fit: cover; }
+  .shot figcaption { font-size: 0.9rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 12px; }
+  .shot figcaption span { color: var(--mute); }
 
   /* About + apprentice */
   .about { border-top: 1px solid var(--line); }
   .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px 64px; }
   .about-copy { display: flex; flex-direction: column; gap: 18px; max-width: 36em; }
   .about-copy p { color: var(--ink-soft); }
-  .about-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 30%; border-radius: 6px; margin-bottom: 8px; }
+  .portrait { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin-bottom: 4px; }
   .ph-block { background: var(--paper-2); background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(0,0,0,.05) 14px 15px); border: 1px solid var(--line-soft); }
   .hire { margin-top: 40px; padding: 28px 32px; border: 1px solid var(--ink); border-radius: 4px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
   .hire h3 { font-size: 1.4rem; }
@@ -266,11 +262,11 @@
   <section class="hero" id="slides">
     <!-- Slideshow: swap each .ph for <img src="…" alt="…"> of real projects -->
     <div class="slides" aria-hidden="true">
-      <figure class="slide is-active" data-caption="Arbeiði úti"><div class="ph"></div></figure>
-      <figure class="slide" data-caption="Toymið á M.B. Overgaard"><div class="ph"></div></figure>
+      <figure class="slide is-active" data-caption="Á veg til næsta arbeiði"><img src="img/bilur.jpg" alt=""></figure>
+      <figure class="slide" data-caption="Nýbygging við útsýni yvir Tórshavn"><img src="img/bjalki-torshavn.jpg" alt=""></figure>
+      <figure class="slide" data-caption="Frá tekning til veruleika"><img src="img/tekning.jpg" alt=""></figure>
+      <figure class="slide" data-caption="Takarbeiði – eisini um veturin"><img src="img/tak-vetur.jpg" alt=""></figure>
     </div>
-
-    <span class="ph-note">Myndir koma her</span>
 
     <div class="wrap hero-inner">
       <p class="eyebrow">Bygningssnikkari · Argir</p>
@@ -280,10 +276,12 @@
         <a class="btn big" href="#samband">Fá óbindandi tilboð</a>
       </div>
       <div class="hero-meta">
-        <span class="cap" id="cap" aria-live="polite">Takarbeiði <small>1 / 2</small></span>
+        <span class="cap" id="cap" aria-live="polite">Á veg til næsta arbeiði <small>1 / 4</small></span>
         <div class="dots" aria-label="Vel mynd">
           <button type="button" aria-label="Mynd 1" aria-current="true"></button>
           <button type="button" aria-label="Mynd 2"></button>
+          <button type="button" aria-label="Mynd 3"></button>
+          <button type="button" aria-label="Mynd 4"></button>
         </div>
       </div>
     </div>
@@ -410,23 +408,22 @@
     </div>
   </section>
 
-  <section id="verkaetlanir">
+  <section class="work" id="verkaetlanir">
     <div class="wrap">
-      <div class="section-head">
+      <div class="work-head">
         <div>
           <p class="eyebrow">Verkætlanir</p>
           <h2>Arbeiði, vit hava gjørt.</h2>
         </div>
-        <p class="lede">Eitt úrval av arbeiðum – úti og inni. Fylg okkum á Facebook fyri at síggja tað nýggjasta.</p>
+        <a class="btn ghost" href="https://www.facebook.com/m.b.overgaard/" target="_blank" rel="noopener">Síggj meira á Facebook</a>
       </div>
-      <div class="proj-grid">
-        <!-- Replace .img blocks with <img src="..." alt="..."> of real projects -->
-        <figure class="proj"><div class="img"></div><figcaption>Altanir og trappur <span>Úti</span></figcaption></figure>
-        <figure class="proj"><div class="img"></div><figcaption>Køk og innrætting <span>Inni</span></figcaption></figure>
-        <figure class="proj"><div class="img"><img src="img/vindeyga-uppseting.jpg" alt="Stórt vindeyga verður sett í nýtt hús"></div><figcaption>Klæðing og vindeygu <span>Úti</span></figcaption></figure>
-        <figure class="proj"><div class="img"></div><figcaption>Loftsinnrætting <span>Inni</span></figcaption></figure>
-        <figure class="proj"><div class="img"></div><figcaption>Útihús <span>Úti</span></figcaption></figure>
-        <figure class="proj"><div class="img"></div><figcaption>Umvæling av eldri húsum <span>Inni og úti</span></figcaption></figure>
+      <div class="track" aria-label="Myndir av arbeiði">
+        <figure class="shot"><div class="img"><img src="img/vindeyga-uppseting.jpg" alt="Stórt vindeyga verður sett í nýtt hús"></div><figcaption>Ísetan av vindeygum <span>Úti</span></figcaption></figure>
+        <figure class="shot"><div class="img"><img src="img/bygning.jpg" alt="Nýbygd hús við stórum vindeygum"></div><figcaption>Nýbygging <span>Úti</span></figcaption></figure>
+        <figure class="shot"><div class="img"><img src="img/bjalki-torshavn.jpg" alt="Bjálki verður lyftur á pláss, Tórshavn í baksýni"></div><figcaption>Bjálkar og berandi timbur <span>Úti</span></figcaption></figure>
+        <figure class="shot"><div class="img"><img src="img/tak-vetur.jpg" alt="Nýtt tak verður lagt um veturin"></div><figcaption>Takarbeiði <span>Úti</span></figcaption></figure>
+        <figure class="shot"><div class="img"><img src="img/tekning.jpg" alt="Tekning og tumstokkur"></div><figcaption>Tekning og máting <span>Inni og úti</span></figcaption></figure>
+        <figure class="shot"><div class="img"><img src="img/bilur.jpg" alt="Bilurin hjá M.B. Overgaard í sólarrisi"></div><figcaption>Á veg til næsta arbeiði <span></span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -439,7 +436,7 @@
           <h2 style="margin-top:10px">Snikkarar í Argir.</h2>
         </div>
         <div class="about-copy">
-          <div class="about-img ph-block"></div>
+          <img class="portrait" src="img/portrett.jpg" alt="M.B. Overgaard" width="96" height="96">
           <p>M.B. Overgaard Sp/f er eitt snikkaravirki í Argir, beint sunnan fyri Tórshavn. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið verður gjørt skilaliga og til tíðina.</p>
           <p>Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.</p>
           <p>Ring ella skriva – tú fært altíð eitt óbindandi tilboð.</p>
