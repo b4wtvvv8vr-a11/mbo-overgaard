@@ -159,6 +159,12 @@
   .tight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
   .tight-copy { display: flex; flex-direction: column; gap: 22px; }
   .tight-copy p { max-width: 34em; }
+  .steps { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 6px 18px; padding: 18px 0; border-top: 1px solid var(--line); }
+  .steps li::before { content: counter(s); grid-row: span 2; font-family: var(--display); font-weight: 800; font-size: 1.1rem; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; }
+  .steps b { display: block; font-family: var(--display); font-weight: 700; font-stretch: 96%; font-size: 1.1rem; }
+  .steps span { grid-column: 2; color: var(--ink-soft); font-size: 0.98rem; }
+  .tight .btn { align-self: flex-start; margin-top: 8px; }
   .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 12px; padding-top: 24px; border-top: 1px solid var(--line); }
   .fact b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.7rem; letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums; }
   .fact span { display: block; font-size: 0.85rem; color: var(--mute); margin-top: 8px; }
@@ -343,13 +349,13 @@
       <div class="tight-copy">
         <p class="eyebrow">Blower Door &amp; termografi</p>
         <h2>Er húsið tætt?</h2>
-        <p class="lede">Ein Blower Door test mátar, hvussu tætt húsið er. Ein stór vifta verður sett í eina úthurð, og trýstmunurin millum inni og úti verður settur til 50 Pa. Sostatt sæst, hvussu nógv luft sleppur ígjøgnum klæðing, vindeygu og samansetingar.</p>
-        <p class="lede">Við termografiskari kanning – hitamyndum – síggja vit nágreiniliga, hvar hitin sleppur út. Tú fært eina frágreiðing við úrslitum og tilmælum um, hvat kann gerast betri.</p>
-        <div class="facts">
-          <div class="fact"><b>50 Pa</b><span>trýstmunur í testini</span></div>
-          <div class="fact"><b>Góðkend</b><span>test og frágreiðing</span></div>
-          <div class="fact"><b>Ein dag</b><span>vanliga tekur kanningin</span></div>
-        </div>
+        <p class="lede">Ein Blower Door test mátar, hvussu tætt húsið er – og hitamyndir vísa nágreiniliga, hvar tað lekur. Soleiðis fer ein kanning fram:</p>
+        <ol class="steps">
+          <li><b>Viftan verður sett í eina úthurð</b><span>Allar aðrar hurðar og vindeygu verða lokað.</span></li>
+          <li><b>Trýstmunurin verður settur til 50 Pa</b><span>Viftan sýgur luft út, og vit máta, hvussu nógv kemur inn aftur gjøgnum lekar.</span></li>
+          <li><b>Lekarnir verða funnir við hitamyndum</b><span>Tú fært eina frágreiðing við úrslitum og tilmælum um, hvat kann gerast betri.</span></li>
+        </ol>
+        <a class="btn" href="#samband">Bílegg kanning</a>
       </div>
       <div class="tight-art" aria-hidden="true">
         <!-- Gable house, fan in the door, air pulled in through leaks -->
