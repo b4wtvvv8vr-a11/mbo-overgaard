@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "cms": "npx -y @sveltia/cms-proxy-server"
+    "cms": "npx -y @sveltia/cms-proxy-server",
+    "deploy": "npm run build && npx wrangler deploy"
   }
 }
