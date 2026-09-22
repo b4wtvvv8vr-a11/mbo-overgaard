@@ -128,31 +128,20 @@
   .section-head .lede { font-size: 1.05rem; padding-top: 6px; }
   @media (max-width: 820px) { .section-head { grid-template-columns: 1fr; gap: 16px; } }
 
-  /* Services – list on the left, panel on the right (BE Smíð idea) */
+  /* Services – hairline grid of boxes */
   .services { border-top: 1px solid var(--line); }
-  .svc { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
-  .svc-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-  .svc-list li { border-bottom: 1px solid var(--line); }
-  .svc-list button {
-    width: 100%; text-align: left; background: none; border: 0; padding: 22px 0; cursor: pointer;
-    font-family: var(--display); font-weight: 700; font-stretch: 96%; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em; color: var(--ink-soft);
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    transition: color .15s ease, padding-left .2s ease;
-  }
-  .svc-list button::after { content: "→"; font-family: var(--body); font-weight: 400; opacity: 0; transition: opacity .15s ease; }
-  .svc-list button:hover { color: var(--ink); }
-  .svc-list button[aria-selected="true"] { color: var(--oak); padding-left: 8px; }
-  .svc-list button[aria-selected="true"]::after { opacity: 1; }
-  .svc-panel { display: flex; flex-direction: column; gap: 18px; }
-  .svc-panel[hidden] { display: none; }
-  .svc-img { aspect-ratio: 16 / 10; border-radius: 6px; background: var(--paper-2); background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(0,0,0,.05) 14px 15px); position: relative; overflow: hidden; }
-  .svc-img img { width: 100%; height: 100%; object-fit: cover; }
-  .svc-panel h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-stretch: 92%; }
-  .svc-panel p { color: var(--ink-soft); max-width: 36em; }
-  .svc-panel ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
-  .svc-panel ul li { font-size: 0.85rem; font-weight: 500; color: var(--ink-soft); background: var(--paper-2); padding: 6px 12px; border-radius: 3px; }
-  .svc-panel .btn { align-self: flex-start; margin-top: 6px; }
-  @media (max-width: 820px) { .svc { grid-template-columns: 1fr; gap: 28px; } .svc-list button { padding: 16px 0; } }
+  .svc-title { margin-bottom: clamp(24px, 4vw, 40px); }
+  .svc-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .svc { background: var(--paper); padding: 32px 32px 40px; display: flex; flex-direction: column; gap: 12px; }
+  .svc h3 { font-size: 1.3rem; }
+  .svc > p { color: var(--ink-soft); font-size: 1rem; max-width: 26em; }
+  .svc ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .svc ul li { position: relative; padding-left: 22px; font-size: 0.97rem; color: var(--ink-soft); }
+  .svc ul li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 9px; height: 9px; background: var(--oak); }
+  .svc-cta { justify-content: flex-start; }
+  .svc-cta .btn { align-self: flex-start; margin-top: 8px; }
+  @media (max-width: 900px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } .svc { padding: 28px 0 32px; } }
 
   /* Blower door – light grey band */
   .tight { background: var(--paper-2); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
@@ -289,60 +278,59 @@
 
   <section class="services" id="taenastur">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Tænastur</p>
-          <h2>Frá einari hurð til heila húsið.</h2>
-        </div>
-        <p class="lede">Stórt ella smátt – vit taka okkum av timburarbeiðinum frá byrjan til enda, og siga tær beint fram, hvat tað kostar.</p>
-      </div>
-
-      <div class="svc">
-        <ul class="svc-list" role="tablist" aria-label="Tænastur">
-          <li><button role="tab" id="tab-inni" aria-selected="true" aria-controls="panel-inni">Timburarbeiði inni</button></li>
-          <li><button role="tab" id="tab-uti" aria-selected="false" aria-controls="panel-uti" tabindex="-1">Timburarbeiði úti</button></li>
-          <li><button role="tab" id="tab-smaerri" aria-selected="false" aria-controls="panel-smaerri" tabindex="-1">Smærri uppgávur</button></li>
-          <li><button role="tab" id="tab-blower" aria-selected="false" aria-controls="panel-blower" tabindex="-1">Blower Door test</button></li>
-          <li><button role="tab" id="tab-termo" aria-selected="false" aria-controls="panel-termo" tabindex="-1">Termografisk kanning</button></li>
-        </ul>
-
-        <!-- Replace each .svc-img with <img> of that kind of work -->
-        <div class="svc-panel" id="panel-inni" role="tabpanel" aria-labelledby="tab-inni">
-          <div class="svc-img"></div>
+      <h2 class="svc-title">Tænastur</h2>
+      <ul class="svc-grid">
+        <li class="svc">
           <h3>Timburarbeiði inni</h3>
-          <p>Køk, gólv, loft, hurðar, skápar og innrætting. Umvæling av eldri húsum og innbygging av nýggjum rúmum – gjørt so tað heldur.</p>
-          <ul><li>Køk</li><li>Gólv</li><li>Loft</li><li>Innihurðar</li><li>Skápar</li><li>Baðirúm</li></ul>
-          <a class="btn ghost" href="#samband">Fá tilboð</a>
-        </div>
-        <div class="svc-panel" id="panel-uti" role="tabpanel" aria-labelledby="tab-uti" hidden>
-          <div class="svc-img"></div>
+          <p>Køk, gólv, loft, hurðar og innrætting – nýtt og umvæling av eldri húsum.</p>
+          <ul>
+            <li>Køk og innrætting</li>
+            <li>Gólv, loft og listar</li>
+            <li>Hurðar og skápar</li>
+          </ul>
+        </li>
+        <li class="svc">
           <h3>Timburarbeiði úti</h3>
-          <p>Altanir, trappur, útihús, klæðing, vindeygu og úthurðar. Bygt til føroyskt veður – vind, regn og salt.</p>
-          <ul><li>Altanir</li><li>Trappur</li><li>Klæðing</li><li>Vindeygu</li><li>Úthurðar</li><li>Útihús</li></ul>
-          <a class="btn ghost" href="#samband">Fá tilboð</a>
-        </div>
-        <div class="svc-panel" id="panel-smaerri" role="tabpanel" aria-labelledby="tab-smaerri" hidden>
-          <div class="svc-img"></div>
+          <p>Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og salt.</p>
+          <ul>
+            <li>Altanir og trappur</li>
+            <li>Klæðing og vindeygu</li>
+            <li>Útihús og úthurðar</li>
+          </ul>
+        </li>
+        <li class="svc">
           <h3>Smærri uppgávur</h3>
-          <p>Ein hurð, sum ikki lokar. Ein hilla, ein trappa, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini – ring, so finna vit ein dag.</p>
-          <ul><li>Hurðar og lásar</li><li>Hillur</li><li>Listar</li><li>Umvæling av vindeygum</li><li>Smáar umvælingar</li></ul>
-          <a class="btn ghost" href="#samband">Fá tilboð</a>
-        </div>
-        <div class="svc-panel" id="panel-blower" role="tabpanel" aria-labelledby="tab-blower" hidden>
-          <div class="svc-img"></div>
+          <p>Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.</p>
+          <ul>
+            <li>Hurðar og lásar</li>
+            <li>Hillur og listar</li>
+            <li>Smáar umvælingar</li>
+          </ul>
+        </li>
+        <li class="svc">
           <h3>Blower Door test</h3>
-          <p>Góðkend tættleikakanning av húsinum. Vit máta við 50 Pa trýstmuni, hvussu nógv luft sleppur ígjøgnum, og finna lekarnar.</p>
-          <ul><li>Góðkend test</li><li>50 Pa</li><li>Frágreiðing</li><li>Nýbygging og eldri hús</li></ul>
-          <a class="btn ghost" href="#blowerdoor">Les meira</a>
-        </div>
-        <div class="svc-panel" id="panel-termo" role="tabpanel" aria-labelledby="tab-termo" hidden>
-          <div class="svc-img"></div>
+          <p>Góðkend tættleikakanning av húsinum – vit finna, hvar luftin sleppur ígjøgnum.</p>
+          <ul>
+            <li>Máting við 50 Pa</li>
+            <li>Nýbygging og eldri hús</li>
+            <li>Frágreiðing við úrslitum</li>
+          </ul>
+        </li>
+        <li class="svc">
           <h3>Termografisk kanning</h3>
-          <p>Hitamyndir vísa nágreiniliga, hvar hitin sleppur út, og hvar tað trekkur – áðrenn tú byrjar at umvæla.</p>
-          <ul><li>Hitamyndir</li><li>Kuldabrýr</li><li>Lekar við vindeygu</li><li>Frágreiðing við tilmælum</li></ul>
-          <a class="btn ghost" href="#blowerdoor">Les meira</a>
-        </div>
-      </div>
+          <p>Hitamyndir vísa nágreiniliga, hvar hitin sleppur út, og hvar tað trekkur.</p>
+          <ul>
+            <li>Hitamyndir av húsinum</li>
+            <li>Kuldabrýr og lekar</li>
+            <li>Tilmæli um umvæling</li>
+          </ul>
+        </li>
+        <li class="svc svc-cta">
+          <h3>Skal okkurt gerast?</h3>
+          <p>Sig okkum, hvat tað snýr seg um, so koma vit og hyggja.</p>
+          <a class="btn" href="#samband">Fá óbindandi tilboð</a>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -501,29 +489,6 @@
     start();
   })();
 
-  // Services – click a service on the left, its panel shows on the right
-  (function () {
-    var tabs = document.querySelectorAll('.svc-list [role="tab"]');
-    var panels = document.querySelectorAll('.svc-panel');
-    function select(tab) {
-      tabs.forEach(function (t) {
-        var on = t === tab;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-        t.tabIndex = on ? 0 : -1;
-      });
-      panels.forEach(function (p) { p.hidden = p.id !== tab.getAttribute('aria-controls'); });
-    }
-    tabs.forEach(function (t, k) {
-      t.addEventListener('click', function () { select(t); });
-      t.addEventListener('keydown', function (e) {
-        var n = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? k + 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? k - 1 : null;
-        if (n === null) return;
-        e.preventDefault();
-        var next = tabs[(n + tabs.length) % tabs.length];
-        select(next); next.focus();
-      });
-    });
-  })();
 </script>
 
 </body>
