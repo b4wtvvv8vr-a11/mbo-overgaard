@@ -1,0 +1,9 @@
+{
+  "name": "mbo-overgaard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "cms": "npx -y @sveltia/cms-proxy-server"
+  }
+}

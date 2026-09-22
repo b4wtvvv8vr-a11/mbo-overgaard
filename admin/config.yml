@@ -1,0 +1,133 @@
+backend:
+  name: github
+  repo: b4wtvvv8vr-a11/mbo-overgaard
+  branch: main
+  # Deployed sveltia-cms-auth worker (see README). Without this, login fails.
+  base_url: https://REPLACE-WITH-AUTH-WORKER.workers.dev
+
+# Lets you run the CMS locally with: npx @sveltia/cms-proxy-server
+local_backend: true
+
+media_folder: img
+public_folder: /img
+
+collections:
+  - name: site
+    label: Heimasíðan
+    files:
+      - name: topbar
+        label: Bjálkin ovast (lærlingur)
+        file: content/site.json
+        fields:
+          - { name: topbar, label: Bjálkin ovast, widget: object, fields: [
+              { name: show, label: Vís bjálkan, widget: boolean, default: true },
+              { name: strong, label: Feit tekstur, widget: string },
+              { name: text, label: Tekstur aftaná, widget: string },
+              { name: link_text, label: Knappur, widget: string },
+              { name: link_url, label: Leinkja, widget: string }
+            ] }
+
+      - name: hero
+        label: Forsíðan ovast
+        file: content/site.json
+        fields:
+          - { name: hero, label: Forsíðan, widget: object, fields: [
+              { name: eyebrow, label: Smátekstur, widget: string },
+              { name: heading, label: Yvirskrift, widget: string },
+              { name: text, label: Tekstur, widget: text },
+              { name: button, label: Knappur, widget: string },
+              { name: slides, label: Myndir, widget: list, min: 1, summary: '{{fields.caption}}', fields: [
+                  { name: image, label: Mynd, widget: image },
+                  { name: caption, label: Tekstur undir myndini, widget: string }
+                ] }
+            ] }
+
+      - name: services
+        label: Tænastur
+        file: content/site.json
+        fields:
+          - { name: services, label: Tænastur, widget: object, fields: [
+              { name: heading, label: Yvirskrift, widget: string },
+              { name: text, label: Tekstur, widget: text },
+              { name: items, label: Kassar, widget: list, summary: '{{fields.title}}', fields: [
+                  { name: tag, label: Merki (Inni / Úti / Máting), widget: string },
+                  { name: title, label: Yvirskrift, widget: string },
+                  { name: text, label: Tekstur, widget: text },
+                  { name: chips, label: Punkt, widget: list, field: { name: chip, label: Punkt, widget: string } },
+                  { name: wide, label: Breiður kassi, widget: boolean, default: false, hint: 'Tveir breiðir kassar fylla eina reglu.' }
+                ] }
+            ] }
+
+      - name: blowerdoor
+        label: Blower Door
+        file: content/site.json
+        fields:
+          - { name: blowerdoor, label: Blower Door, widget: object, fields: [
+              { name: eyebrow, label: Smátekstur, widget: string },
+              { name: heading, label: Yvirskrift, widget: string },
+              { name: text, label: Tekstur, widget: text },
+              { name: button, label: Knappur, widget: string },
+              { name: steps, label: Stig, widget: list, summary: '{{fields.title}}', fields: [
+                  { name: title, label: Yvirskrift, widget: string },
+                  { name: text, label: Tekstur, widget: text }
+                ] }
+            ] }
+
+      - name: work
+        label: Verkætlanir
+        file: content/site.json
+        fields:
+          - { name: work, label: Verkætlanir, widget: object, fields: [
+              { name: eyebrow, label: Smátekstur, widget: string },
+              { name: heading, label: Yvirskrift, widget: string },
+              { name: button, label: Knappur, widget: string },
+              { name: photos, label: Myndir, widget: list, summary: '{{fields.caption}}', fields: [
+                  { name: image, label: Mynd, widget: image },
+                  { name: caption, label: Yvirskrift, widget: string },
+                  { name: place, label: Inni ella úti, widget: string, required: false },
+                  { name: alt, label: Lýsing av myndini, widget: string, hint: 'Fyri tey, sum ikki síggja myndina.' }
+                ] }
+            ] }
+
+      - name: about
+        label: Um okkum
+        file: content/site.json
+        fields:
+          - { name: about, label: Um okkum, widget: object, fields: [
+              { name: eyebrow, label: Smátekstur, widget: string },
+              { name: heading, label: Yvirskrift, widget: string },
+              { name: portrait, label: Mynd, widget: image },
+              { name: portrait_alt, label: Lýsing av myndini, widget: string },
+              { name: paragraphs, label: Tekstur, widget: list, field: { name: p, label: Reglubrot, widget: text } }
+            ] }
+
+      - name: samband
+        label: Samband
+        file: content/site.json
+        fields:
+          - { name: samband, label: Samband, widget: object, fields: [
+              { name: eyebrow, label: Smátekstur, widget: string },
+              { name: heading, label: Yvirskrift, widget: string },
+              { name: text, label: Tekstur, widget: text },
+              { name: card_heading, label: Yvirskrift á kassanum, widget: string },
+              { name: card_text, label: Tekstur á kassanum, widget: string },
+              { name: email_button, label: T-post knappur, widget: string }
+            ] }
+          - { name: contact, label: Sambandsupplýsingar, widget: object, fields: [
+              { name: phone_display, label: Telefon (sum tað verður víst), widget: string },
+              { name: phone_link, label: Telefon (við landskoti, t.d. +298272627), widget: string },
+              { name: email, label: T-postur, widget: string },
+              { name: address_line1, label: Bústaður, widget: string },
+              { name: address_line2, label: Postnr. og býur, widget: string },
+              { name: facebook_url, label: Facebook leinkja, widget: string },
+              { name: facebook_label, label: Facebook navn, widget: string }
+            ] }
+
+      - name: meta
+        label: Titil og lýsing (Google)
+        file: content/site.json
+        fields:
+          - { name: meta, label: Titil og lýsing, widget: object, fields: [
+              { name: title, label: Titil, widget: string },
+              { name: description, label: Lýsing, widget: text, hint: 'Tað, sum Google vísir undir titlinum.' }
+            ] }
