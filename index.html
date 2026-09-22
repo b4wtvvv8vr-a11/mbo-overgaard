@@ -189,7 +189,12 @@
 
   /* Contact */
   .contact { border-top: 1px solid var(--line); }
-  .contact-grid { display: grid; grid-template-columns: 1fr; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: start; }
+  .contact-cta { background: var(--paper-2); border-radius: 6px; padding: clamp(26px, 3vw, 36px); display: flex; flex-direction: column; gap: 10px; }
+  .contact-cta h3 { font-size: 1.5rem; }
+  .contact-cta p { color: var(--ink-soft); max-width: 24em; }
+  .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+  .cta-buttons .btn { padding: 16px 26px; font-size: 1.02rem; }
   .details { display: flex; flex-direction: column; gap: 28px; }
   .dl { display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; margin: 0; font-size: 1.02rem; }
   .dl dt { color: var(--mute); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding-top: 4px; }
@@ -453,6 +458,20 @@
             <dt>Facebook</dt>
             <dd><a href="https://www.facebook.com/m.b.overgaard/" target="_blank" rel="noopener">M B Overgaard Sp/f</a></dd>
           </dl>
+        </div>
+        <div class="contact-cta">
+          <h3>Fá eitt óbindandi tilboð</h3>
+          <p>Ring, ella send okkum eini orð um, hvat skal gerast.</p>
+          <div class="cta-buttons">
+            <a class="btn big" href="tel:+298272627">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" width="20" height="20"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6 3z"/></svg>
+              Ring 27 26 27
+            </a>
+            <a class="btn big ghost" href="mailto:overgaard@mbo.fo?subject=Umb%C3%B8n%20um%20tilbo%C3%B0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              Send t-post
+            </a>
+          </div>
         </div>
       </div>
     </div>
