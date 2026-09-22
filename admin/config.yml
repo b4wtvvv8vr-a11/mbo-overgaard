@@ -3,7 +3,7 @@ backend:
   repo: b4wtvvv8vr-a11/mbo-overgaard
   branch: main
   # Deployed sveltia-cms-auth worker (see README). Without this, login fails.
-  base_url: https://REPLACE-WITH-AUTH-WORKER.workers.dev
+  base_url: https://sveltia-cms-auth.b4wtvvv8vr.workers.dev
 
 # Lets you run the CMS locally with: npx @sveltia/cms-proxy-server
 local_backend: true
