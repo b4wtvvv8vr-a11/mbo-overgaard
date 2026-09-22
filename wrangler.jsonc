@@ -1,9 +1,12 @@
 {
-  // Static-assets-only Worker: no server code, it just serves dist/.
+  // Serves dist/ behind a code gate (see src/worker.mjs).
+  // With no SITE_CODE secret set, the site is served normally.
   "name": "mbo-overgaard",
+  "main": "src/worker.mjs",
   "compatibility_date": "2026-09-22",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
