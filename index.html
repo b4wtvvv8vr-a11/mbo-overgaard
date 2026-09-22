@@ -189,6 +189,8 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px 64px; }
   .about-copy { display: flex; flex-direction: column; gap: 18px; max-width: 36em; }
   .about-copy p { color: var(--ink-soft); }
+  .about-id { width: fit-content; margin-top: 10px; }
+  .about-id h2 { white-space: nowrap; }
   .portrait { width: 140px; height: 140px; border-radius: 4px; object-fit: cover; margin: 24px auto 0; }
   .ph-block { background: var(--paper-2); background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(0,0,0,.05) 14px 15px); border: 1px solid var(--line-soft); }
   .hire { margin-top: 40px; padding: 28px 32px; border: 1px solid var(--ink); border-radius: 4px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -428,8 +430,10 @@
       <div class="about-grid">
         <div>
           <p class="eyebrow">Um okkum</p>
-          <h2 style="margin-top:10px">Snikkarar í Argir.</h2>
-          <img class="portrait" src="img/portrett.jpg" alt="M.B. Overgaard" width="140" height="140">
+          <div class="about-id">
+            <h2>Snikkarar í Argir.</h2>
+            <img class="portrait" src="img/portrett.jpg" alt="M.B. Overgaard" width="140" height="140">
+          </div>
         </div>
         <div class="about-copy">
           <p>M.B. Overgaard Sp/f er eitt snikkaravirki í Argir, beint sunnan fyri Tórshavn. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið verður gjørt skilaliga og til tíðina.</p>
