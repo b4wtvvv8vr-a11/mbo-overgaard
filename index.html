@@ -128,22 +128,30 @@
   .section-head .lede { font-size: 1.05rem; padding-top: 6px; }
   @media (max-width: 820px) { .section-head { grid-template-columns: 1fr; gap: 16px; } }
 
-  /* Services – two lead trades weighted larger, then three supporting ones */
+  /* Services – a full-width index of trades, one row each */
   .services { border-top: 1px solid var(--line); }
-  .svc-title { margin-bottom: clamp(24px, 4vw, 44px); }
-  .svc-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(28px, 3.5vw, 44px) clamp(28px, 3vw, 40px); }
-  .svc { grid-column: span 2; display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line); }
-  .svc-lead { grid-column: span 3; border-top: 2px solid var(--ink); }
+  .svc-head { display: flex; justify-content: space-between; align-items: end; gap: 24px 48px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 48px); }
+  .svc-head p { color: var(--ink-soft); font-size: 1.05rem; max-width: 30em; }
+  .svc-list { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+  .svc {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) minmax(0, 0.85fr);
+    gap: 10px clamp(24px, 4vw, 56px); align-items: start;
+    padding: clamp(24px, 2.6vw, 34px) 0; border-top: 1px solid var(--line);
+    position: relative;
+  }
+  .svc::before { content: ""; position: absolute; top: -1px; left: 0; width: 0; height: 2px; background: var(--oak); transition: width .35s ease; }
+  .svc:hover::before { width: 100%; }
+  .svc-name { display: flex; flex-direction: column; gap: 8px; }
+  .svc h3 { font-size: clamp(1.35rem, 2vw, 1.75rem); font-stretch: 92%; }
   .svc-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); }
-  .svc h3 { font-size: 1.3rem; }
-  .svc-lead h3 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); font-stretch: 92%; }
-  .svc-desc { color: var(--ink-soft); font-size: 1rem; max-width: 28em; }
-  .svc-items { list-style: none; margin: 10px 0 0; padding: 0; }
-  .svc-items li { position: relative; padding: 9px 0 9px 26px; font-size: 0.97rem; color: var(--ink-soft); border-top: 1px solid var(--line-soft); }
-  .svc-items li:last-child { border-bottom: 1px solid var(--line-soft); }
-  .svc-items li::before { content: ""; position: absolute; left: 0; top: 1.25em; width: 12px; height: 2px; background: var(--oak); }
-  @media (max-width: 900px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .svc, .svc-lead { grid-column: span 1; } }
-  @media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } }
+  .svc-desc { color: var(--ink-soft); font-size: 1.02rem; padding-top: 3px; }
+  .svc-items { list-style: none; margin: 0; padding-top: 5px; display: flex; flex-direction: column; gap: 6px; }
+  .svc-items li { font-size: 0.93rem; color: var(--mute); }
+  @media (max-width: 900px) {
+    .svc { grid-template-columns: 1fr 1fr; }
+    .svc-name { grid-column: 1 / -1; }
+  }
+  @media (max-width: 600px) { .svc { grid-template-columns: 1fr; gap: 12px; } }
 
   /* Blower door – light grey band */
   .tight { background: var(--paper-2); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
@@ -285,11 +293,17 @@
 
   <section class="services" id="taenastur">
     <div class="wrap">
-      <h2 class="svc-title">Tænastur</h2>
-      <ul class="svc-grid">
-        <li class="svc svc-lead">
-          <p class="svc-tag">Inni</p>
-          <h3>Timburarbeiði inni</h3>
+      <div class="svc-head">
+        <h2>Tænastur</h2>
+        <p>Stórt ella smátt – vit taka okkum av timburarbeiðinum frá byrjan til enda.</p>
+      </div>
+
+      <ul class="svc-list">
+        <li class="svc">
+          <div class="svc-name">
+            <h3>Timburarbeiði inni</h3>
+            <span class="svc-tag">Inni</span>
+          </div>
           <p class="svc-desc">Køk, gólv, loft, hurðar og innrætting – nýtt og umvæling av eldri húsum.</p>
           <ul class="svc-items">
             <li>Køk og innrætting</li>
@@ -297,9 +311,11 @@
             <li>Hurðar og skápar</li>
           </ul>
         </li>
-        <li class="svc svc-lead">
-          <p class="svc-tag">Úti</p>
-          <h3>Timburarbeiði úti</h3>
+        <li class="svc">
+          <div class="svc-name">
+            <h3>Timburarbeiði úti</h3>
+            <span class="svc-tag">Úti</span>
+          </div>
           <p class="svc-desc">Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og salt.</p>
           <ul class="svc-items">
             <li>Altanir og trappur</li>
@@ -308,8 +324,10 @@
           </ul>
         </li>
         <li class="svc">
-          <p class="svc-tag">Inni og úti</p>
-          <h3>Smærri uppgávur</h3>
+          <div class="svc-name">
+            <h3>Smærri uppgávur</h3>
+            <span class="svc-tag">Inni og úti</span>
+          </div>
           <p class="svc-desc">Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.</p>
           <ul class="svc-items">
             <li>Hurðar og lásar</li>
@@ -318,8 +336,10 @@
           </ul>
         </li>
         <li class="svc">
-          <p class="svc-tag">Máting</p>
-          <h3>Blower Door test</h3>
+          <div class="svc-name">
+            <h3>Blower Door test</h3>
+            <span class="svc-tag">Máting</span>
+          </div>
           <p class="svc-desc">Góðkend tættleikakanning – vit finna, hvar luftin sleppur ígjøgnum.</p>
           <ul class="svc-items">
             <li>Máting við 50 Pa</li>
@@ -328,8 +348,10 @@
           </ul>
         </li>
         <li class="svc">
-          <p class="svc-tag">Máting</p>
-          <h3>Termografisk kanning</h3>
+          <div class="svc-name">
+            <h3>Termografisk kanning</h3>
+            <span class="svc-tag">Máting</span>
+          </div>
           <p class="svc-desc">Hitamyndir vísa, hvar hitin sleppur út, og hvar tað trekkur.</p>
           <ul class="svc-items">
             <li>Hitamyndir av húsinum</li>
