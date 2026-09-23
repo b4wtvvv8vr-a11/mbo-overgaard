@@ -1,18 +1,7 @@
 {
-  "samband": {
-    "eyebrow": "Samband",
-    "heading": "Ring ella skriva.",
-    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt gott tilboð.",
-    "card_heading": "Fá eitt gott tilboð",
-    "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
-    "email_button": "Send t-post"
-  },
-  "contact": {
-    "phone_display": "27 26 27",
-    "phone_link": "+298272627",
-    "email": "overgaard@mbo.fo",
-    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
-    "facebook_label": "M B Overgaard Sp/f"
+  "meta": {
+    "title": "M.B. Overgaard",
+    "description": "M.B. Overgaard Sp/f – bygningssnikkari á Argjum. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum."
   },
   "about": {
     "eyebrow": "Um okkum",
@@ -45,6 +34,13 @@
     ],
     "text": "Ein Blower Door test mátar, hvussu tætt húsið er – og hitamyndir vísa nágreiniliga, hvar tað lekur. Tað er lóg at øll hús í føroyum skulu gera eina blower door test. Soleiðis fer ein kanning fram:"
   },
+  "contact": {
+    "email": "overgaard@mbo.fo",
+    "facebook_label": "M B Overgaard Sp/f",
+    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
+    "phone_display": "27 26 27",
+    "phone_link": "+298272627"
+  },
   "hero": {
     "button": "Fá óbindandi tilboð",
     "eyebrow": "Bygningssnikkari · Argir",
@@ -65,9 +61,13 @@
     ],
     "text": "M.B. Overgaard Sp/f er bygningssnikkari í Argir. Vit byggja, umvæla og innrætta – og gera góðkendar Blower Door testir og termografiskar kanningar av sethúsum."
   },
-  "meta": {
-    "description": "M.B. Overgaard Sp/f – bygningssnikkari í Argir. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
-    "title": "M.B. Overgaard"
+  "samband": {
+    "card_heading": "Fá eitt gott tilboð",
+    "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
+    "email_button": "Send t-post",
+    "eyebrow": "Samband",
+    "heading": "Ring ella skriva.",
+    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt gott tilboð."
   },
   "services": {
     "heading": "Tænastur",
