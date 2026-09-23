@@ -7,8 +7,6 @@
     "phone_display": "27 26 27",
     "phone_link": "+298272627",
     "email": "overgaard@mbo.fo",
-    "address_line1": "Við Klingurstjørn 4",
-    "address_line2": "160 Argir",
     "facebook_url": "https://www.facebook.com/m.b.overgaard/",
     "facebook_label": "M B Overgaard Sp/f"
   },
@@ -25,9 +23,18 @@
     "text": "M.B. Overgaard Sp/f er bygningssnikkari í Argir. Vit byggja, umvæla og innrætta – og gera góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
     "button": "Fá óbindandi tilboð",
     "slides": [
-      { "image": "/img/bilur.jpg", "caption": "Á veg til næsta arbeiði" },
-      { "image": "/img/bjalki-torshavn.jpg", "caption": "Nýbygging við útsýni yvir Tórshavn" },
-      { "image": "/img/tekning.jpg", "caption": "Frá tekning til veruleika" }
+      {
+        "image": "/img/bilur.jpg",
+        "caption": "Á veg til næsta arbeiði"
+      },
+      {
+        "image": "/img/bjalki-torshavn.jpg",
+        "caption": "Nýbygging við útsýni yvir Tórshavn"
+      },
+      {
+        "image": "/img/tekning.jpg",
+        "caption": "Frá tekning til veruleika"
+      }
     ]
   },
   "services": {
@@ -38,35 +45,55 @@
         "tag": "Inni",
         "title": "Timburarbeiði inni",
         "text": "Køk, gólv, loft, hurðar og innrætting – nýtt og umvæling av eldri húsum.",
-        "chips": ["Køk og innrætting", "Gólv, loft og listar", "Hurðar og skápar"],
+        "chips": [
+          "Køk og innrætting",
+          "Gólv, loft og listar",
+          "Hurðar og skápar"
+        ],
         "wide": false
       },
       {
         "tag": "Úti",
         "title": "Timburarbeiði úti",
         "text": "Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og salt.",
-        "chips": ["Altanir og trappur", "Klæðing og vindeygu", "Útihús og úthurðar"],
+        "chips": [
+          "Altanir og trappur",
+          "Klæðing og vindeygu",
+          "Útihús og úthurðar"
+        ],
         "wide": false
       },
       {
         "tag": "Inni og úti",
         "title": "Smærri uppgávur",
         "text": "Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.",
-        "chips": ["Hurðar og lásar", "Hillur og listar", "Smáar umvælingar"],
+        "chips": [
+          "Hurðar og lásar",
+          "Hillur og listar",
+          "Smáar umvælingar"
+        ],
         "wide": false
       },
       {
         "tag": "Máting",
         "title": "Blower Door test",
         "text": "Góðkend tættleikakanning av húsinum – vit máta við 50 Pa og finna, hvar luftin sleppur ígjøgnum.",
-        "chips": ["Máting við 50 Pa", "Nýbygging og eldri hús", "Frágreiðing við úrslitum"],
+        "chips": [
+          "Máting við 50 Pa",
+          "Nýbygging og eldri hús",
+          "Frágreiðing við úrslitum"
+        ],
         "wide": true
       },
       {
         "tag": "Máting",
         "title": "Termografisk kanning",
         "text": "Hitamyndir vísa nágreiniliga, hvar hitin sleppur út, og hvar tað trekkur í húsinum.",
-        "chips": ["Hitamyndir av húsinum", "Kuldabrýr og lekar", "Tilmæli um umvæling"],
+        "chips": [
+          "Hitamyndir av húsinum",
+          "Kuldabrýr og lekar",
+          "Tilmæli um umvæling"
+        ],
         "wide": true
       }
     ]

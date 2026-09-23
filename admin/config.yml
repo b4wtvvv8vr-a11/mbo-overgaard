@@ -117,8 +117,6 @@ collections:
               { name: phone_display, label: Telefon (sum tað verður víst), widget: string },
               { name: phone_link, label: Telefon (við landskoti, t.d. +298272627), widget: string },
               { name: email, label: T-postur, widget: string },
-              { name: address_line1, label: Bústaður, widget: string },
-              { name: address_line2, label: Postnr. og býur, widget: string },
               { name: facebook_url, label: Facebook leinkja, widget: string },
               { name: facebook_label, label: Facebook navn, widget: string }
             ] }

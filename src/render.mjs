@@ -245,8 +245,6 @@ ${about}
             <dd class="big"><a href="${tel}">${esc(c.phone_display)}</a></dd>
             <dt>T-postur</dt>
             <dd><a href="${mail}">${esc(c.email)}</a></dd>
-            <dt>Bústaður</dt>
-            <dd>${esc(c.address_line1)}<br>${esc(c.address_line2)}</dd>
             <dt>Facebook</dt>
             <dd><a href="${esc(c.facebook_url)}" target="_blank" rel="noopener">${esc(c.facebook_label)}</a></dd>
           </dl>
