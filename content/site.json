@@ -1,45 +1,7 @@
 {
-  "meta": {
-    "title": "M.B. Overgaard",
-    "description": "M.B. Overgaard Sp/f – bygningssnikkari í Argir. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum."
-  },
-  "contact": {
-    "phone_display": "27 26 27",
-    "phone_link": "+298272627",
-    "email": "overgaard@mbo.fo",
-    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
-    "facebook_label": "M B Overgaard Sp/f"
-  },
-  "topbar": {
-    "show": true,
-    "strong": "Vit søkja timburlærling",
-    "text": "– ert tú tann rætti?",
-    "link_text": "Les meira á Starvsportal →",
-    "link_url": "https://starvsportal.fo/job/timburlaerlingur-til-husasmid/"
-  },
-  "hero": {
-    "eyebrow": "Bygningssnikkari · Argir",
-    "heading": "Alt timburarbeiði — inni og úti.",
-    "text": "M.B. Overgaard Sp/f er bygningssnikkari í Argir. Vit byggja, umvæla og innrætta – og gera góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
-    "button": "Fá óbindandi tilboð",
-    "slides": [
-      {
-        "image": "/img/bilur.jpg",
-        "caption": "Á veg til næsta arbeiði"
-      },
-      {
-        "image": "/img/bjalki-torshavn.jpg",
-        "caption": "Nýbygging við útsýni yvir Tórshavn"
-      },
-      {
-        "image": "/img/tekning.jpg",
-        "caption": "Frá tekning til veruleika"
-      }
-    ]
-  },
   "services": {
     "heading": "Tænastur",
-    "text": "Stórt ella smátt – vit taka okkum av timburarbeiðinum frá byrjan til enda.",
+    "text": "Vit taka okkum av timburarbeiðinum um tað er smátt ella stórt. Frá byrjan til enda.",
     "items": [
       {
         "tag": "Inni",
@@ -55,7 +17,7 @@
       {
         "tag": "Úti",
         "title": "Timburarbeiði úti",
-        "text": "Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og salt.",
+        "text": "Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og kava",
         "chips": [
           "Altanir og trappur",
           "Klæðing og vindeygu",
@@ -68,7 +30,7 @@
         "title": "Smærri uppgávur",
         "text": "Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.",
         "chips": [
-          "Hurðar og lásar",
+          "Hurðar og lás",
           "Hillur og listar",
           "Smáar umvælingar"
         ],
@@ -80,7 +42,7 @@
         "text": "Góðkend tættleikakanning av húsinum – vit máta við 50 Pa og finna, hvar luftin sleppur ígjøgnum.",
         "chips": [
           "Máting við 50 Pa",
-          "Nýbygging og eldri hús",
+          "Nýggj og eldri hús",
           "Frágreiðing við úrslitum"
         ],
         "wide": true
@@ -98,68 +60,106 @@
       }
     ]
   },
-  "blowerdoor": {
-    "eyebrow": "Blower Door & termografi",
-    "heading": "Er húsið tætt?",
-    "text": "Ein Blower Door test mátar, hvussu tætt húsið er – og hitamyndir vísa nágreiniliga, hvar tað lekur. Soleiðis fer ein kanning fram:",
-    "button": "Bílegg kanning",
-    "steps": [
-      {
-        "title": "Viftan verður sett í eina úthurð",
-        "text": "Allar aðrar hurðar og vindeygu verða lokað."
-      },
-      {
-        "title": "Trýstmunurin verður settur til 50 Pa",
-        "text": "Viftan sýgur luft út, og vit máta, hvussu nógv kemur inn aftur gjøgnum lekar."
-      },
-      {
-        "title": "Lekarnir verða funnir við hitamyndum",
-        "text": "Tú fært eina frágreiðing við úrslitum og tilmælum um, hvat kann gerast betri."
-      }
-    ]
-  },
-  "work": {
-    "eyebrow": "Verkætlanir",
-    "heading": "Arbeiði, vit hava gjørt.",
-    "button": "Síggj meira á Facebook",
-    "photos": [
-      {
-        "image": "/img/vindeyga-uppseting.jpg",
-        "caption": "Ísetan av vindeygum",
-        "place": "Úti",
-        "alt": "Stórt vindeyga verður sett í nýtt hús"
-      },
-      {
-        "image": "/img/bygning.jpg",
-        "caption": "Nýbygging",
-        "place": "Úti",
-        "alt": "Nýbygd hús við stórum vindeygum"
-      },
-      {
-        "image": "/img/tak-vetur.jpg",
-        "caption": "Takarbeiði",
-        "place": "Úti",
-        "alt": "Nýtt tak verður lagt um veturin"
-      }
-    ]
-  },
   "about": {
     "eyebrow": "Um okkum",
     "heading": "Snikkarar í Argir.",
-    "portrait": "/img/portrett.jpg",
-    "portrait_alt": "M.B. Overgaard",
     "paragraphs": [
       "M.B. Overgaard Sp/f er eitt snikkaravirki í Argir, beint sunnan fyri Tórshavn. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið verður gjørt skilaliga og til tíðina.",
       "Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.",
       "Ring ella skriva – tú fært altíð eitt óbindandi tilboð."
-    ]
+    ],
+    "portrait": "/img/portrett.jpg",
+    "portrait_alt": "M.B. Overgaard"
+  },
+  "blowerdoor": {
+    "button": "Bílegg kanning",
+    "eyebrow": "Blower Door & termografi",
+    "heading": "Er húsið tætt?",
+    "steps": [
+      {
+        "text": "Allar aðrar hurðar og vindeygu verða lokað.",
+        "title": "Viftan verður sett í eina úthurð"
+      },
+      {
+        "text": "Viftan sýgur luft út, og vit máta, hvussu nógv kemur inn aftur gjøgnum lekar.",
+        "title": "Trýstmunurin verður settur til 50 Pa"
+      },
+      {
+        "text": "Tú fært eina frágreiðing við úrslitum og tilmælum um, hvat kann gerast betri.",
+        "title": "Lekarnir verða funnir við hitamyndum"
+      }
+    ],
+    "text": "Ein Blower Door test mátar, hvussu tætt húsið er – og hitamyndir vísa nágreiniliga, hvar tað lekur. Soleiðis fer ein kanning fram:"
+  },
+  "contact": {
+    "email": "overgaard@mbo.fo",
+    "facebook_label": "M B Overgaard Sp/f",
+    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
+    "phone_display": "27 26 27",
+    "phone_link": "+298272627"
+  },
+  "hero": {
+    "button": "Fá óbindandi tilboð",
+    "eyebrow": "Bygningssnikkari · Argir",
+    "heading": "Alt timburarbeiði — inni og úti.",
+    "slides": [
+      {
+        "caption": "Á veg til næsta arbeiði",
+        "image": "/img/bilur.jpg"
+      },
+      {
+        "caption": "Nýbygging við útsýni yvir Tórshavn",
+        "image": "/img/bjalki-torshavn.jpg"
+      },
+      {
+        "caption": "Frá tekning til veruleika",
+        "image": "/img/tekning.jpg"
+      }
+    ],
+    "text": "M.B. Overgaard Sp/f er bygningssnikkari í Argir. Vit byggja, umvæla og innrætta – og gera góðkendar Blower Door testir og termografiskar kanningar av sethúsum."
+  },
+  "meta": {
+    "description": "M.B. Overgaard Sp/f – bygningssnikkari í Argir. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
+    "title": "M.B. Overgaard"
   },
   "samband": {
-    "eyebrow": "Samband",
-    "heading": "Ring ella skriva.",
-    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt óbindandi tilboð.",
     "card_heading": "Fá eitt óbindandi tilboð",
     "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
-    "email_button": "Send t-post"
+    "email_button": "Send t-post",
+    "eyebrow": "Samband",
+    "heading": "Ring ella skriva.",
+    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt óbindandi tilboð."
+  },
+  "topbar": {
+    "link_text": "Les meira á Starvsportal →",
+    "link_url": "https://starvsportal.fo/job/timburlaerlingur-til-husasmid/",
+    "show": true,
+    "strong": "Vit søkja timburlærling",
+    "text": "– ert tú tann rætti?"
+  },
+  "work": {
+    "button": "Síggj meira á Facebook",
+    "eyebrow": "Verkætlanir",
+    "heading": "Arbeiði, vit hava gjørt.",
+    "photos": [
+      {
+        "alt": "Stórt vindeyga verður sett í nýtt hús",
+        "caption": "Ísetan av vindeygum",
+        "image": "/img/vindeyga-uppseting.jpg",
+        "place": "Úti"
+      },
+      {
+        "alt": "Nýbygd hús við stórum vindeygum",
+        "caption": "Nýbygging",
+        "image": "/img/bygning.jpg",
+        "place": "Úti"
+      },
+      {
+        "alt": "Nýtt tak verður lagt um veturin",
+        "caption": "Takarbeiði",
+        "image": "/img/tak-vetur.jpg",
+        "place": "Úti"
+      }
+    ]
   }
 }
