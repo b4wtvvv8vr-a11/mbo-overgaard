@@ -3,3 +3,4 @@
 .claude/launch.json
 dist/
 node_modules/
+.wrangler/
