@@ -1,14 +1,29 @@
 {
+  "samband": {
+    "eyebrow": "Samband",
+    "heading": "Ring ella skriva.",
+    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt gott tilboð.",
+    "card_heading": "Fá eitt gott tilboð",
+    "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
+    "email_button": "Send t-post"
+  },
+  "contact": {
+    "phone_display": "27 26 27",
+    "phone_link": "+298272627",
+    "email": "overgaard@mbo.fo",
+    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
+    "facebook_label": "M B Overgaard Sp/f"
+  },
   "about": {
     "eyebrow": "Um okkum",
     "heading": "Snikkarar á Argjum.",
-    "portrait": "/img/portrett.jpg",
-    "portrait_alt": "M.B. Overgaard",
     "paragraphs": [
       "M.B. Overgaard Sp/f er eitt snikkaravirki í Argir, beint sunnan fyri Tórshavn. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið verður gjørt skilaliga og til tíðina.",
       "Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.",
       "Ring ella skriva – tú fært altíð eitt gott tilboð."
-    ]
+    ],
+    "portrait": "/img/portrett.jpg",
+    "portrait_alt": "M.B. Overgaard"
   },
   "blowerdoor": {
     "button": "Bílegg kanning",
@@ -29,13 +44,6 @@
       }
     ],
     "text": "Ein Blower Door test mátar, hvussu tætt húsið er – og hitamyndir vísa nágreiniliga, hvar tað lekur. Tað er lóg at øll hús í føroyum skulu gera eina blower door test. Soleiðis fer ein kanning fram:"
-  },
-  "contact": {
-    "email": "overgaard@mbo.fo",
-    "facebook_label": "M B Overgaard Sp/f",
-    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
-    "phone_display": "27 26 27",
-    "phone_link": "+298272627"
   },
   "hero": {
     "button": "Fá óbindandi tilboð",
@@ -60,14 +68,6 @@
   "meta": {
     "description": "M.B. Overgaard Sp/f – bygningssnikkari í Argir. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
     "title": "M.B. Overgaard"
-  },
-  "samband": {
-    "card_heading": "Fá eitt óbindandi tilboð",
-    "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
-    "email_button": "Send t-post",
-    "eyebrow": "Samband",
-    "heading": "Ring ella skriva.",
-    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt óbindandi tilboð."
   },
   "services": {
     "heading": "Tænastur",
