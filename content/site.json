@@ -1,36 +1,36 @@
 {
+  "about": {
+    "eyebrow": "Um okkum",
+    "heading": "Snikkarar á Argjum.",
+    "portrait": "/img/portrett.jpg",
+    "portrait_alt": "M.B. Overgaard",
+    "paragraphs": [
+      "M.B. Overgaard Sp/f er eitt snikkaravirki. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið, ið verður gjørt er dygdargott og til tíðina.",
+      "Umframt snikkaraarbeiðið gera vit góðkendar Blower Door royndir og termografiskar kanningar av sethúsum.",
+      "Ring ella skriva – tú fært altíð eitt gott tilboð."
+    ]
+  },
   "blowerdoor": {
+    "button": "Bílegg kanning",
     "eyebrow": "Blower Door & termografi",
     "heading": "Er húsið tætt?",
-    "text": "Tá ið nýggj hús verða bygd, krevur bygningsreglugerðin, at tættleikin verður mátaður og skjalprógvaður. M.B. Overgaard ger hesa góðkendu Blower Door testina – og við hitamyndum vísa vit eisini, hvar eldri hús leka. Soleiðis fer ein kanning fram:",
-    "button": "Bílegg kanning",
     "image": "/img/termografi-domi.svg",
     "image_alt": "Dømi um termografiska mynd – hvar hitin sleppur út úr húsinum",
     "steps": [
       {
-        "title": "Viftan verður sett í eina úthurð",
-        "text": "Allar aðrar hurðar og vindeygu verða loka."
+        "text": "Allar aðrar hurðar og vindeygu verða loka.",
+        "title": "Viftan verður sett í eina úthurð"
       },
       {
-        "title": "Trýstmunurin verður settur til 50 Pa",
-        "text": "Viftan sýgur luft út, og vit máta, hvussu nógv kemur inn aftur gjøgnum lekar."
+        "text": "Viftan sýgur luft út, og vit máta, hvussu nógv kemur inn aftur gjøgnum lekar.",
+        "title": "Trýstmunurin verður settur til 50 Pa"
       },
       {
-        "title": "Lekarnir verða funnir við hitamyndum",
-        "text": "Tú fært eina frágreiðing við úrslitum og tilmælum um, hvat kann gerast betri."
+        "text": "Tú fært eina frágreiðing við úrslitum og tilmælum um, hvat kann gerast betri.",
+        "title": "Lekarnir verða funnir við hitamyndum"
       }
-    ]
-  },
-  "about": {
-    "eyebrow": "Um okkum",
-    "heading": "Snikkarar á Argjum.",
-    "paragraphs": [
-      "M.B. Overgaard Sp/f er eitt snikkaravirki í Argir, beint sunnan fyri Tórshavn. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið verður gjørt skilaliga og til tíðina.",
-      "Umframt snikkaraarbeiðið gera vit góðkendar Blower Door testir og termografiskar kanningar av sethúsum, so tú veitst, hvar húsið missir hita, áðrenn tú tekur avgerð um umvæling.",
-      "Ring ella skriva – tú fært altíð eitt gott tilboð."
     ],
-    "portrait": "/img/portrett.jpg",
-    "portrait_alt": "M.B. Overgaard"
+    "text": "Tá ið nýggj hús verða bygd, krevur bygningsreglugerðin, at tættleikin verður mátaður og skjalprógvaður. M.B. Overgaard ger hesa góðkendu Blower Door testina – og við hitamyndum vísa vit eisini, hvar eldri hús leka. Soleiðis fer ein kanning fram:"
   },
   "contact": {
     "email": "overgaard@mbo.fo",
