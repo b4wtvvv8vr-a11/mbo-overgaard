@@ -83,7 +83,7 @@
         "tag": "Inni",
         "text": "Køk, gólv, loft, hurðar og innrætting – nýtt og umvæling av eldri húsum.",
         "title": "Timburarbeiði inni",
-        "wide": false
+        "wide": true
       },
       {
         "chips": [
@@ -94,18 +94,7 @@
         "tag": "Úti",
         "text": "Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og kava",
         "title": "Timburarbeiði úti",
-        "wide": false
-      },
-      {
-        "chips": [
-          "Hurðar og lás",
-          "Hillur og listar",
-          "Smáar umvælingar"
-        ],
-        "tag": "Inni og úti",
-        "text": "Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.",
-        "title": "Smærri uppgávur",
-        "wide": false
+        "wide": true
       },
       {
         "chips": [
