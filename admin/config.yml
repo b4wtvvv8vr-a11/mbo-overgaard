@@ -67,6 +67,8 @@ collections:
               { name: heading, label: Yvirskrift, widget: string },
               { name: text, label: Tekstur, widget: text },
               { name: button, label: Knappur, widget: string },
+              { name: image, label: Mynd (t.d. termografisk mynd), widget: image },
+              { name: image_alt, label: Lýsing av myndini, widget: string },
               { name: steps, label: Stig, widget: list, summary: '{{fields.title}}', fields: [
                   { name: title, label: Yvirskrift, widget: string },
                   { name: text, label: Tekstur, widget: text }

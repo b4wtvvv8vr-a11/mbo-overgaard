@@ -148,51 +148,8 @@ ${steps}
         </ol>
         <a class="btn" href="#samband">${esc(d.blowerdoor.button)}</a>
       </div>
-      <div class="tight-art" aria-hidden="true">
-        <!-- Gable house, fan in the door, air pulled in through leaks -->
-        <svg viewBox="0 0 440 340" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20 300 H420"/>
-          <path d="M100 300 V150 L220 60 L340 150 V300"/>
-          <path d="M86 160 L220 48 L354 160"/>
-          <path d="M120 136 l-3 -8 M138 122 l-2 -9 M156 108 l-4 -8 M174 94 l-2 -9 M192 80 l-4 -8 M210 66 l-2 -9 M246 66 l3 -9 M264 80 l3 -8 M282 94 l2 -9 M300 108 l4 -8 M318 122 l2 -9 M336 136 l3 -8"/>
-          <path d="M100 170 H340 M100 190 H340 M100 210 H340 M100 230 H340 M100 250 H340 M100 270 H340 M100 290 H340" stroke-width="1" opacity=".4"/>
-          <rect x="130" y="180" width="44" height="52" fill="var(--paper)"/>
-          <path d="M152 180 V232 M130 206 H174"/>
-          <rect x="266" y="180" width="44" height="52" fill="var(--paper)"/>
-          <path d="M288 180 V232 M266 206 H310"/>
-          <rect x="204" y="104" width="32" height="40" fill="var(--paper)"/>
-          <path d="M220 104 V144"/>
-          <path d="M290 112 V84 H306 V125"/>
-          <path d="M192 300 V308 H248 V300"/>
-          <rect x="200" y="222" width="40" height="78" fill="var(--paper)"/>
-          <rect x="203" y="225" width="34" height="72" stroke-dasharray="3 3" opacity=".7"/>
-          <circle cx="220" cy="256" r="14"/>
-          <!-- fan: six curved blades around a hub -->
-          <g stroke-width="1.6">
-            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(0 220 256)"/>
-            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(60 220 256)"/>
-            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(120 220 256)"/>
-            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(180 220 256)"/>
-            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(240 220 256)"/>
-            <path d="M220 256 C 224 250, 224 246, 220 243" transform="rotate(300 220 256)"/>
-          </g>
-          <circle cx="220" cy="256" r="2.6" fill="currentColor"/>
-          <path d="M220 280 V304" stroke="var(--oak)" stroke-width="2"/>
-          <path d="M215 298 L220 306 L225 298" stroke="var(--oak)" stroke-width="2"/>
-          <g stroke="var(--oak)" stroke-width="1.8">
-            <path d="M118 206 H128 M124 202 L129 206 L124 210"/>
-            <path d="M322 206 H312 M316 202 L311 206 L316 210"/>
-            <path d="M94 168 L108 168 M104 164 L109 168 L104 172"/>
-            <path d="M346 168 L332 168 M336 164 L331 168 L336 172"/>
-            <path d="M234 92 L224 100 M231 100 L223 101 L224 93"/>
-            <path d="M88 292 L106 292 M102 288 L107 292 L102 296"/>
-            <path d="M352 292 L334 292 M338 288 L333 292 L338 296"/>
-          </g>
-          <g transform="translate(40 60)">
-            <rect x="0" y="0" width="64" height="40" rx="3" fill="var(--paper)"/>
-            <text x="32" y="26" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-size="15" font-weight="700" fill="currentColor" stroke="none">50 Pa</text>
-          </g>
-        </svg>
+      <div class="tight-art">
+        <img src="${esc(d.blowerdoor.image)}" alt="${esc(d.blowerdoor.image_alt)}" loading="lazy" decoding="async">
       </div>
     </div>
   </section>

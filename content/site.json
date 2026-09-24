@@ -16,6 +16,8 @@
   },
   "blowerdoor": {
     "button": "Bílegg kanning",
+    "image": "/img/termografi-domi.svg",
+    "image_alt": "Dømi um termografiska mynd – hvar hitin sleppur út úr húsinum",
     "eyebrow": "Blower Door & termografi",
     "heading": "Er húsið tætt?",
     "steps": [

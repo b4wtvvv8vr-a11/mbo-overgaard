@@ -151,6 +151,7 @@
   .fact b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.7rem; letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums; }
   .fact span { display: block; font-size: 0.85rem; color: var(--mute); margin-top: 8px; }
   .tight-art { color: var(--ink); }
+  .tight-art img { width: 100%; border-radius: 8px; display: block; }
   .tight-art svg { width: 100%; }
   @media (max-width: 820px) { .tight-grid { grid-template-columns: 1fr; } .tight-art { max-width: 460px; } .facts { gap: 12px; } }
   @media (max-width: 520px) { .facts { grid-template-columns: 1fr; } }
