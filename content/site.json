@@ -1,14 +1,29 @@
 {
+  "samband": {
+    "eyebrow": "Samband",
+    "heading": "Ring ella skriva.",
+    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt gott tilboð.",
+    "card_heading": "Fá eitt gott tilboð",
+    "card_text": "Ring, ella skriva.",
+    "email_button": "Send t-post"
+  },
+  "contact": {
+    "phone_display": "27 26 27",
+    "phone_link": "+298272627",
+    "email": "overgaard@mbo.fo",
+    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
+    "facebook_label": "M B Overgaard Sp/f"
+  },
   "about": {
     "eyebrow": "Um okkum",
     "heading": "Snikkarar á Argjum.",
-    "portrait": "/img/portrett.jpg",
-    "portrait_alt": "M.B. Overgaard",
     "paragraphs": [
       "M.B. Overgaard Sp/f er eitt snikkaravirki. Vit gera alt timburarbeiði inni og úti – nýbygging, umvæling og innrætting – og leggja dent á, at arbeiðið, ið verður gjørt er dygdargott og til tíðina.",
       "Umframt snikkaraarbeiðið gera vit góðkendar Blower Door royndir og termografiskar kanningar av sethúsum.",
       "Ring ella skriva – tú fært altíð eitt gott tilboð."
-    ]
+    ],
+    "portrait": "/img/portrett.jpg",
+    "portrait_alt": "M.B. Overgaard"
   },
   "blowerdoor": {
     "button": "Bílegg kanning",
@@ -31,13 +46,6 @@
       }
     ],
     "text": "Tá ið nýggj hús verða bygd, krevur bygningsreglugerðin, at tættleikin verður mátaður og skjalprógvaður. M.B. Overgaard ger hesa góðkendu Blower Door testina – og við hitamyndum vísa vit eisini, hvar eldri hús leka. Soleiðis fer ein kanning fram:"
-  },
-  "contact": {
-    "email": "overgaard@mbo.fo",
-    "facebook_label": "M B Overgaard Sp/f",
-    "facebook_url": "https://www.facebook.com/m.b.overgaard/",
-    "phone_display": "27 26 27",
-    "phone_link": "+298272627"
   },
   "hero": {
     "button": "Fá óbindandi tilboð",
@@ -62,14 +70,6 @@
   "meta": {
     "description": "M.B. Overgaard Sp/f – bygningssnikkari á Argjum. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
     "title": "M.B. Overgaard"
-  },
-  "samband": {
-    "card_heading": "Fá eitt gott tilboð",
-    "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
-    "email_button": "Send t-post",
-    "eyebrow": "Samband",
-    "heading": "Ring ella skriva.",
-    "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt gott tilboð."
   },
   "services": {
     "heading": "Tænastur",
