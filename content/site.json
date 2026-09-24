@@ -1,7 +1,64 @@
 {
-  "meta": {
-    "title": "M.B. Overgaard",
-    "description": "M.B. Overgaard Sp/f – bygningssnikkari á Argjum. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum."
+  "services": {
+    "heading": "Tænastur",
+    "text": "Vit taka okkum av timburarbeiðinum um tað er smátt ella stórt. Frá byrjan til enda.",
+    "items": [
+      {
+        "tag": "Inni",
+        "title": "Timburarbeiði inni",
+        "text": "Køk, gólv, loft, hurðar og innrætting – nýtt og umvæling av eldri húsum.",
+        "chips": [
+          "Køkar og skáp",
+          "Gólv, loft og listar",
+          "Hurðar og trappur"
+        ],
+        "wide": false
+      },
+      {
+        "tag": "Úti",
+        "title": "Timburarbeiði úti",
+        "text": "Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og kava",
+        "chips": [
+          "Tak og trappur",
+          "Klæðing og vindeygu",
+          "Altanir og úthurðar"
+        ],
+        "wide": false
+      },
+      {
+        "tag": "Inni og úti",
+        "title": "Smærri uppgávur",
+        "text": "Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.",
+        "chips": [
+          "Hurðar og lás",
+          "Hillur og listar",
+          "Smáar umvælingar"
+        ],
+        "wide": false
+      },
+      {
+        "tag": "Máting",
+        "title": "Blower Door test",
+        "text": "Góðkend tættleikakanning av húsinum – vit máta við 50 Pa og kunnu finna, hvar luftin sleppur ígjøgnum.",
+        "chips": [
+          "Máting við 50 Pa",
+          "Nýggj og eldri hús",
+          "Frágreiðing við úrslitum"
+        ],
+        "wide": true
+      },
+      {
+        "tag": "Máting",
+        "title": "Termografisk kanning",
+        "text": "Hitamyndir vísa nágreiniliga, hvar hitin sleppur út, og hvar tað trekkur í húsinum.",
+        "chips": [
+          "Hitamyndir av húsinum",
+          "Kuldabrýr og lekar",
+          "Tilmæli um umvæling"
+        ],
+        "wide": true
+      }
+    ]
   },
   "about": {
     "eyebrow": "Um okkum",
@@ -16,10 +73,10 @@
   },
   "blowerdoor": {
     "button": "Bílegg kanning",
-    "image": "/img/termografi-domi.svg",
-    "image_alt": "Dømi um termografiska mynd – hvar hitin sleppur út úr húsinum",
     "eyebrow": "Blower Door & termografi",
     "heading": "Er húsið tætt?",
+    "image": "/img/termografi-domi.svg",
+    "image_alt": "Dømi um termografiska mynd – hvar hitin sleppur út úr húsinum",
     "steps": [
       {
         "text": "Allar aðrar hurðar og vindeygu verða lokað.",
@@ -63,6 +120,10 @@
     ],
     "text": "M.B. Overgaard Sp/f er bygningssnikkari í Argir. Vit byggja, umvæla og innrætta – og gera góðkendar Blower Door testir og termografiskar kanningar av sethúsum."
   },
+  "meta": {
+    "description": "M.B. Overgaard Sp/f – bygningssnikkari á Argjum. Alt timburarbeiði inni og úti, góðkendar Blower Door testir og termografiskar kanningar av sethúsum.",
+    "title": "M.B. Overgaard"
+  },
   "samband": {
     "card_heading": "Fá eitt gott tilboð",
     "card_text": "Ring, ella send okkum eini orð um, hvat skal gerast.",
@@ -70,67 +131,6 @@
     "eyebrow": "Samband",
     "heading": "Ring ella skriva.",
     "text": "Sig okkum, hvat skal gerast, so koma vit og hyggja – og tú fært eitt gott tilboð."
-  },
-  "services": {
-    "heading": "Tænastur",
-    "items": [
-      {
-        "chips": [
-          "Køk og innrætting",
-          "Gólv, loft og listar",
-          "Hurðar og skápar"
-        ],
-        "tag": "Inni",
-        "text": "Køk, gólv, loft, hurðar og innrætting – nýtt og umvæling av eldri húsum.",
-        "title": "Timburarbeiði inni",
-        "wide": false
-      },
-      {
-        "chips": [
-          "Altanir og trappur",
-          "Klæðing og vindeygu",
-          "Útihús og úthurðar"
-        ],
-        "tag": "Úti",
-        "text": "Altanir, klæðing, vindeygu og útihús – bygt til føroyskt veður, vind, regn og kava",
-        "title": "Timburarbeiði úti",
-        "wide": false
-      },
-      {
-        "chips": [
-          "Hurðar og lás",
-          "Hillur og listar",
-          "Smáar umvælingar"
-        ],
-        "tag": "Inni og úti",
-        "text": "Ein hurð, ein hilla, eitt vindeyga. Vit koma eisini til tey smáu arbeiðini.",
-        "title": "Smærri uppgávur",
-        "wide": false
-      },
-      {
-        "chips": [
-          "Máting við 50 Pa",
-          "Nýggj og eldri hús",
-          "Frágreiðing við úrslitum"
-        ],
-        "tag": "Máting",
-        "text": "Góðkend tættleikakanning av húsinum – vit máta við 50 Pa og finna, hvar luftin sleppur ígjøgnum.",
-        "title": "Blower Door test",
-        "wide": true
-      },
-      {
-        "chips": [
-          "Hitamyndir av húsinum",
-          "Kuldabrýr og lekar",
-          "Tilmæli um umvæling"
-        ],
-        "tag": "Máting",
-        "text": "Hitamyndir vísa nágreiniliga, hvar hitin sleppur út, og hvar tað trekkur í húsinum.",
-        "title": "Termografisk kanning",
-        "wide": true
-      }
-    ],
-    "text": "Vit taka okkum av timburarbeiðinum um tað er smátt ella stórt. Frá byrjan til enda."
   },
   "topbar": {
     "link_text": "Les meira á Starvsportal →",
