@@ -10,6 +10,12 @@ const sha256 = async (s) => {
   return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
 };
 
+const hmac = async (key, msg) => {
+  const k = await crypto.subtle.importKey('raw', new TextEncoder().encode(key), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const sig = await crypto.subtle.sign('HMAC', k, new TextEncoder().encode(msg));
+  return [...new Uint8Array(sig)].map((b) => b.toString(16).padStart(2, '0')).join('');
+};
+
 // Compares without leaking where the strings differ.
 const equal = (a, b) => {
   if (a.length !== b.length) return false;
@@ -91,6 +97,31 @@ export default {
           location: '/',
           'set-cookie': `${COOKIE}=${expected}; Path=/; Max-Age=${MAX_AGE}; HttpOnly; Secure; SameSite=Lax`,
           'cache-control': 'no-store',
+        },
+      });
+    }
+
+    // Unlock link from the Ráðvit app: /__unlock?exp=<unix seconds>&sig=<hmac>.
+    // The app's server signs "unlock:<exp>" with SITE_CODE, so the link
+    // works without the client ever seeing the code, and expires quickly.
+    if (url.pathname === '/__unlock' && request.method === 'GET') {
+      const exp = Number(url.searchParams.get('exp'));
+      const now = Date.now() / 1000;
+      const sig = url.searchParams.get('sig') || '';
+      const valid = exp > now && exp < now + 3600 && equal(sig, await hmac(code, `unlock:${exp}`));
+      if (!valid) {
+        return new Response(gatePage(false), {
+          status: 401,
+          headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' },
+        });
+      }
+      return new Response(null, {
+        status: 303,
+        headers: {
+          location: '/',
+          'set-cookie': `${COOKIE}=${expected}; Path=/; Max-Age=${MAX_AGE}; HttpOnly; Secure; SameSite=Lax`,
+          'cache-control': 'no-store',
+          'referrer-policy': 'no-referrer',
         },
       });
     }
